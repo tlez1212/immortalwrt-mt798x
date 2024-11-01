@@ -1,7 +1,12 @@
-name: Create and publish a Openwrt image
+name: Build a Openwrt image
+
 on:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 jobs:
-  my_job:
-    name: deploy to staging
+  build:
     runs-on: ubuntu-22.04
