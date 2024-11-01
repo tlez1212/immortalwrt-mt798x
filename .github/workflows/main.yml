@@ -1,12 +1,12 @@
 name: Build a Openwrt image
 
-on:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+on: workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-22.04
+    steps:
+      - name: env
+        run: |
+          echo "hello word"
+          echo "first test"
